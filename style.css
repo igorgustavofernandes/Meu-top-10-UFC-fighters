@@ -1,0 +1,59 @@
+body {
+    background-color: #222; /*Dark Gray */
+    color: white;          /* White text */
+    font-family: Arial, sans-serif;
+}
+
+.fighters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the whole grid on the screen */
+}
+
+.card {
+    background-color: #333; /* Slightly lighter gray */
+    padding: 20px;          /* Space inside the box */
+    border-radius: 10px;    /* Rounded corners */
+    border: 2px solid gold; /* A border fit for champions */
+    text-align: center;     /* Centers the text */
+    margin-bottom: 20px;    /* Space between cards *//* Esse código controla TODAS as imagens dos lutadores */
+}
+
+/* =========================================
+   ESTILO DAS IMAGENS (Copie tudo isso)
+========================================= */
+
+/* 1. Regra Geral (Aplica a todos os 10 lutadores) */
+.fighter-img {
+    width: 100%;             /* Garante que não "estoura" para os lados */
+    height: 250px;           /* Altura fixa para todos ficarem iguais */
+    object-fit: cover;       /* Corta o excesso para não esticar */
+    object-position: top center; /* Foco padrão: olha para o topo da foto */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: block;          /* Ajuda a centralizar dentro do card */
+    margin-left: auto;       /* Margem automática na esquerda */
+    margin-right: auto;      /* Margem automática na direita */
+}
+
+/* Correção para Khabib e McGregor */
+.foco-centro {
+    width: 100%;             /* Força a largura */
+    height: 250px;           /* Força a altura */
+    object-fit: cover;       /* Força o corte */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    object-position: center center !important; /* O foco no meio */
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    margin-top: 50px;       /* Afasta dos cards */
+    border-top: 1px solid #444; /* Uma linha fina elegante */
+    color: #888;            /* Cinza mais discreto */
+    font-size: 14px;
+}
