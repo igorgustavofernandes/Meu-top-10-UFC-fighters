@@ -1,59 +1,175 @@
+/* --- CONFIGURAÇÕES GERAIS --- */
 body {
-    background-color: #222; /*Dark Gray */
-    color: white;          /* White text */
+    background-color: #222; /* Fundo do site: Cinza Escuro */
+    color: white;           /* Texto: Branco */
     font-family: Arial, sans-serif;
+    margin: 0;              /* Remove margens padrão do navegador */
 }
 
+/* --- Título Principal --- */
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Configuração da Logo do UFC */
+.logo-ufc {
+    width: 100px; /* Aqui você controla o tamanho (aumente ou diminua) */
+    height: auto; /* Mantém a proporção (não deixa ela achatada) */
+    display: block; /* Ajuda a centralizar */
+    margin: 0 auto 15px auto; /* Centraliza e dá um espaço do título */
+}
+
+/* --- O GRID (Organiza os cards) --- */
 .fighters-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 30px; /* Aumentei um pouco o espaço */
     padding: 20px;
     max-width: 1200px;
-    margin: 0 auto; /* Centers the whole grid on the screen */
+    margin: 0 auto; /* Centraliza o grid na tela */
 }
 
+/* --- O CARD (A estrutura principal) --- */
 .card {
-    background-color: #333; /* Slightly lighter gray */
-    padding: 20px;          /* Space inside the box */
-    border-radius: 10px;    /* Rounded corners */
-    border: 2px solid gold; /* A border fit for champions */
-    text-align: center;     /* Centers the text */
-    margin-bottom: 20px;    /* Space between cards *//* Esse código controla TODAS as imagens dos lutadores */
+    /* 1. Configurações de Texto e Espaço */
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px; /* Cantos arredondados */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5); /* Sombra para destacar do fundo */
+    
+    /* 2. O Truque da Borda Colorida (Dark Mode) */
+    border: 4px solid transparent; /* Espaço transparente para a borda */
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    
+    /* 3. Cor Padrão (Se não tiver país, fica dourado e fundo cinza #333) */
+    background-image: linear-gradient(#333, #333), linear-gradient(to right, gold, #d4af37);
 }
 
-/* =========================================
-   ESTILO DAS IMAGENS (Copie tudo isso)
-========================================= */
-
-/* 1. Regra Geral (Aplica a todos os 10 lutadores) */
+/* --- ESTILO DAS IMAGENS --- */
 .fighter-img {
-    width: 100%;             /* Garante que não "estoura" para os lados */
-    height: 250px;           /* Altura fixa para todos ficarem iguais */
-    object-fit: cover;       /* Corta o excesso para não esticar */
-    object-position: top center; /* Foco padrão: olha para o topo da foto */
-    border-radius: 8px;
+    width: 100%;             
+    height: 250px;           
+    object-fit: cover;       
+    object-position: top center; 
+    border-radius: 10px;
     margin-bottom: 15px;
-    display: block;          /* Ajuda a centralizar dentro do card */
-    margin-left: auto;       /* Margem automática na esquerda */
-    margin-right: auto;      /* Margem automática na direita */
+    display: block;          
 }
 
-/* Correção para Khabib e McGregor */
+/* Classe extra para ajustar foco (Khabib/McGregor) */
 .foco-centro {
-    width: 100%;             /* Força a largura */
-    height: 250px;           /* Força a altura */
-    object-fit: cover;       /* Força o corte */
-    border-radius: 8px;
-    margin-bottom: 15px;
-    object-position: center center !important; /* O foco no meio */
+    object-position: center center !important;
 }
 
+/* --- LISTAS (Remove as bolinhas) --- */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 8px;
+    font-size: 1.1rem; /* Texto levemente maior */
+}
+
+/* --- RODAPÉ --- */
 footer {
     text-align: center;
     padding: 40px;
-    margin-top: 50px;       /* Afasta dos cards */
-    border-top: 1px solid #444; /* Uma linha fina elegante */
-    color: #888;            /* Cinza mais discreto */
+    margin-top: 50px;
+    border-top: 1px solid #444;
+    color: #888;
     font-size: 14px;
+}
+
+/* =========================================
+   AS CORES DAS BANDEIRAS 🏳️‍🌈 (Modo Listras Sólidas)
+========================================= */
+
+/* Estados Unidos 🇺🇸 (Vermelho, Prata, Azul - Listras Diagonais Sólidas) */
+.card.usa {
+    background-image: linear-gradient(#333, #333), 
+                      linear-gradient(to right bottom, 
+                        #B22234 0% 33%, 
+                        #d9d9d9 33% 66%, 
+                        #3C3B6E 66% 100%);
+}
+
+/* Brasil 🇧🇷 (Verde, Amarelo, Azul - Listras Diagonais Sólidas) */
+.card.brazil {
+    background-image: linear-gradient(#333, #333), 
+                      linear-gradient(to right bottom, 
+                        #009c3b 0% 33%, 
+                        #ffdf00 33% 66%, 
+                        #002776 66% 100%);
+}
+
+/* Irlanda 🇮🇪 (Verde, Branco, Laranja - Listras Verticais Sólidas) */
+.card.ireland {
+    background-image: linear-gradient(#333, #333), 
+                      linear-gradient(to right, 
+                        #169b62 0% 33%, 
+                        #ffffff 33% 66%, 
+                        #ff883e 66% 100%);
+}
+
+/* Rússia 🇷🇺 (Branco, Azul, Vermelho - Listras Horizontais Sólidas) */
+.card.russia {
+    background-image: linear-gradient(#333, #333), 
+                      linear-gradient(to bottom, 
+                        #ffffff 0% 33%, 
+                        #0039A6 33% 66%, 
+                        #D52B1E 66% 100%);
+}
+
+/* Canadá 🇨🇦 (Vermelho, Branco, Vermelho - Listras Verticais Sólidas) */
+.card.canada {
+    background-image: linear-gradient(#333, #333), 
+                      linear-gradient(to right, 
+                        #FF0000 0% 30%, 
+                        #ffffff 30% 70%, 
+                        #FF0000 70% 100%);
+}
+
+/* =========================================
+   👑 EFEITOS ESPECIAIS: O TOP 1 (GOAT) 👑
+========================================= */
+
+/* 1. A Animação do Brilho (Pulsação Dourada) */
+@keyframes brilho-campeao {
+    0% {
+        /* Sombra menor e mais transparente */
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+        transform: scale(1.05); /* Mantém ele levemente maior */
+    }
+    50% {
+        /* Sombra GIGANTE e Dourada Brilhante */
+        box-shadow: 0 0 40px rgba(255, 215, 0, 0.9), 0 0 10px gold; 
+        transform: scale(1.08); /* Dá um leve "respiro" aumentando o tamanho */
+    }
+    100% {
+        /* Volta ao estado inicial */
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+        transform: scale(1.05);
+    }
+}
+
+/* 2. Aplicando no Jon Jones */
+.card.top-1 {
+    /* Deixa o card sempre na frente dos outros se eles se encostarem */
+    z-index: 10;
+    
+    /* Borda Dourada Extra para reforçar */
+    border: 2px solid gold; 
+
+    /* AQUI É O SEGREDO: DUAS ANIMAÇÕES AO MESMO TEMPO 
+       1ª: balanco-bandeira (que já criamos, para a bandeira mexer)
+       2ª: brilho-campeao (que criamos agora, para o brilho dourado)
+       Separamos por vírgula. */
+    animation: balanco-bandeira 3s ease-in-out infinite alternate, 
+               brilho-campeao 2s ease-in-out infinite;
 }
