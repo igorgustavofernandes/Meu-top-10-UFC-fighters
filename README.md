@@ -1,19 +1,31 @@
 # My Top 10 UFC Fighters
 
-A personal website presenting a selection of my favorite MMA fighters. This was one of my first web projects and an opportunity to practice page structure, styling, and basic project organization.
+A personal website showcasing a selection of my favorite MMA fighters. This was one of my first web development projects and an opportunity to practice HTML structure, CSS styling, and basic project organization.
 
-**Project type:** Personal learning project  
-**Technologies:** HTML5, CSS3
+Um site pessoal que apresenta uma seleção dos meus lutadores favoritos de MMA. Este foi um dos meus primeiros projetos de desenvolvimento web e uma oportunidade para praticar estrutura HTML, estilização CSS e organização de projetos.
 
-## Features
+## Live Demo | Demonstração
+
+[View the website on GitHub Pages](https://igorgustavofernandes.github.io/Meu-top-10-UFC-fighters/)
+
+## Technologies | Tecnologias
+
+- HTML5
+- CSS3
+
+## Features | Funcionalidades
 
 - Fighter cards with images and basic information;
 - Visual ranking of selected fighters;
 - CSS styling and card layouts.
 
-## Run locally
+- Cartões de lutadores com imagens e informações básicas;
+- Ranking visual dos lutadores selecionados;
+- Estilização CSS e organização em cartões.
 
-1. Clone this repository:
+## Run Locally | Executar localmente
+
+1. Clone the repository:
 
    ```bash
    git clone https://github.com/igorgustavofernandes/Meu-top-10-UFC-fighters.git
@@ -24,16 +36,20 @@ A personal website presenting a selection of my favorite MMA fighters. This was 
 
 No build step or package installation is required.
 
-## Project status
+Para executar localmente:
 
-This is an early learning project. The code and content reflect the stage of my web development studies when it was created. A hosted demo link is not currently available; use the instructions above to run it locally.
+1. Clone o repositório.
+2. Abra a pasta do projeto.
+3. Abra o arquivo `index.html` no navegador.
 
-## Português
+Não é necessário instalar dependências ou executar etapas de compilação.
 
-Site pessoal com uma seleção dos meus lutadores favoritos de MMA. O projeto foi uma das minhas primeiras experiências com desenvolvimento web e serviu para praticar estruturação de páginas com HTML e estilização com CSS.
+## Project Background | Sobre o Projeto
 
-Para executar, clone o repositório e abra o arquivo `index.html` no navegador.
+This is an early learning project. Its code and content reflect the stage of my web development studies when it was created.
+
+Este é um projeto inicial de aprendizagem. Seu código e conteúdo refletem a etapa dos meus estudos de desenvolvimento web em que foi criado.
 
 ---
 
-[GitHub profile](https://github.com/igorgustavofernandes)
+[GitHub Profile](https://github.com/igorgustavofernandes)
